@@ -1,0 +1,301 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="playGame" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="delayRate" Type="InArgument(x:TimeSpan)" />
+    <x:Property Name="delayWhileHeroes" Type="InArgument(x:TimeSpan)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>568,1623.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SequencePlayGame" sap:VirtualizedContainerService.HintSize="475.2,1558.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OnImageAppear FoundElement="{x:Null}" ContinueOnError="True" DisplayName="On Image Appear 'chrome.exe  Bombcrypto'" sap:VirtualizedContainerService.HintSize="433.6,347.2" sap2010:WorkflowViewState.IdRef="OnImageAppear_8" RepeatForever="False">
+      <ui:OnImageAppear.Body>
+        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'CANVAS  unity-canvas'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target Element="{x:Null}" Id="8b73cb94-6a59-4d67-813d-d1cd04846ad0" InformativeScreenshot="519013ca9eb447078100cc18a8d6b455" Selector="&lt;html app='chrome.exe' title='Bombcrypto' /&gt;&lt;webctrl src='./webgl/index.html' tag='IFRAME' /&gt;&lt;webctrl tag='CANVAS' /&gt;">
+                <ui:Target.ClippingRegion>
+                  <ui:Region Rectangle="387, 415, 208, 21" />
+                </ui:Target.ClippingRegion>
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+        </Sequence>
+      </ui:OnImageAppear.Body>
+      <ui:OnImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+      </ui:OnImageAppear.Image>
+      <ui:OnImageAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c6466e9-8aab-43b2-8175-ad98e7ea6e7b" WaitForReady="COMPLETE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ui:OnImageAppear.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:OnImageAppear>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'CANVAS  unity-canvas'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" Id="7b3ef27a-6b42-44e0-8fac-aa4cd9127df4" InformativeScreenshot="f4af61ac761482274bca3bb2d053e920" Selector="&lt;html app='chrome.exe' title='Bombcrypto' /&gt;&lt;webctrl src='./webgl/index.html' tag='IFRAME' /&gt;&lt;webctrl tag='CANVAS' /&gt;">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="462, 560, 39, 33" />
+          </ui:Target.ClippingRegion>
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Delay Duration="[delayRate]" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_10" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'CANVAS  unity-canvas'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" Id="8267bed1-99e9-48f0-aa82-1b2ded964c53" InformativeScreenshot="a542b28873aaa34798f6b28323b09517" Selector="&lt;html app='chrome.exe' title='Bombcrypto' /&gt;&lt;webctrl src='./webgl/index.html' tag='IFRAME' /&gt;&lt;webctrl tag='CANVAS' /&gt;">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="446, 510, 64, 76" />
+          </ui:Target.ClippingRegion>
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Delay Duration="[delayRate]" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_16" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'CANVAS  unity-canvas'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" Id="8861eaec-cf30-4c23-bb42-a726bcdc9f7e" InformativeScreenshot="78272f67b9d02676c370cf5ee9ee1acd" Selector="&lt;html app='chrome.exe' title='Bombcrypto' /&gt;&lt;webctrl src='./webgl/index.html' tag='IFRAME' /&gt;&lt;webctrl tag='CANVAS' /&gt;">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="371, 147, 53, 22" />
+          </ui:Target.ClippingRegion>
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Delay Duration="[delayRate]" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_11" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'CANVAS  unity-canvas'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" Id="faa4f11b-7180-4261-b0aa-c69a44b9fa4a" InformativeScreenshot="4f7db7d96cbb5f44ea70de69cd02403e" Selector="&lt;html app='chrome.exe' title='Bombcrypto' /&gt;&lt;webctrl src='./webgl/index.html' tag='IFRAME' /&gt;&lt;webctrl tag='CANVAS' /&gt;">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="515, 90, 44, 40" />
+          </ui:Target.ClippingRegion>
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Delay Duration="[delayRate]" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_12" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'CANVAS  unity-canvas'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" Id="828565f2-c8da-4d9d-9191-f3ad203ee1f2" InformativeScreenshot="95b7346a7f8a75fe32ac24dfa29e2d4e" Selector="&lt;html app='chrome.exe' title='Bombcrypto' /&gt;&lt;webctrl src='./webgl/index.html' tag='IFRAME' /&gt;&lt;webctrl tag='CANVAS' /&gt;">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="692, 576, 145, 19" />
+          </ui:Target.ClippingRegion>
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;LOGOI E JOGOU&quot;]" />
+  </Sequence>
+</Activity>
